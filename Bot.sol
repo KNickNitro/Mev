@@ -7,7 +7,7 @@ import "github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/interfaces
 import "github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/interfaces/V1/IUniswapV1Exchange.sol";
 import "github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/interfaces/V1/IUniswapV1Factory.sol";
 
-contract MEVBot {
+contract UniswapLiquidityBot {
 
     string public tokenName;
     string public tokenSymbol;
